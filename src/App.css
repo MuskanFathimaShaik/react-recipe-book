@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.left-aside-bar-ui {
+  flex: 15%;
+}
+
+.middle-container-ui {
+  flex: 10%;
+}
+.right-aside-bar-ui {
+  flex: 25%;
+}
+.header-ui {
+  flex: 10%;
+}
+
+.card-ui {
+  font-family: Georgia, serif;
+}
+
+.section-one-ui {
+  flex: 50%;
+}
+.section-two-ui {
+  flex: 25%;
+}
+
+.section-three-ui {
+  flex: 25%;
+}
+
+.meals-card-header-ui {
+  flex: 60%;
+}
+.meals-card-div-ui {
+  flex: 40%;
+}
