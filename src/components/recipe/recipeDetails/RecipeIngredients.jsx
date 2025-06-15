@@ -10,7 +10,8 @@ const RecipeIngredients = ({ ingredients }) => {
  [&::-webkit-scrollbar-thumb]:bg-gray-300
  [&::-webkit-scrollbar-thumb]:rounded
  dark:[&::-webkit-scrollbar-track]:bg-slate-100
- dark:[&::-webkit-scrollbar-thumb]:bg-slate-300">
+ dark:[&::-webkit-scrollbar-thumb]:bg-slate-300"
+    >
       <div className="flex flex-col gap-4 p-8">
         <h1 className="text-3xl">Ingredients</h1>
 

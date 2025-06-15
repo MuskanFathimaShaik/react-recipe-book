@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function CategoriesCard({ imgUrl, categoryName }) {
   return (
     <Link to={`/categories/${categoryName}`}>
-      <Card className="mt-6 flex flex-col border justify-center  p-3 cursor-pointer rounded w-96 hover:shadow-xl  hover:opacity-80">
+      <Card className="mt-6 flex flex-col border w-full md:w-96 lg:w-96 justify-center  p-3 cursor-pointer rounded  hover:shadow-xl  hover:opacity-80">
         <CardHeader color="blue-gray" className="relative h-56">
           <img src={imgUrl} alt="category-card-thumbnail" />
         </CardHeader>
@@ -19,7 +19,8 @@ function CategoriesCard({ imgUrl, categoryName }) {
           <Typography
             variant="h5"
             color="blue-gray"
-            className="mb-2 text-center">
+            className="mb-2 text-center"
+          >
             {categoryName}
           </Typography>
         </CardBody>

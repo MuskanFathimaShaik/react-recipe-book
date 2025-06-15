@@ -10,7 +10,8 @@ const RecipeInstructions = ({ replacedSteps }) => {
 [&::-webkit-scrollbar-thumb]:bg-gray-300
 [&::-webkit-scrollbar-thumb]:rounded
 dark:[&::-webkit-scrollbar-track]:bg-slate-100
-dark:[&::-webkit-scrollbar-thumb]:bg-slate-300">
+dark:[&::-webkit-scrollbar-thumb]:bg-slate-300"
+    >
       <h2 className="text-2xl">Instructions: </h2>
       {replacedSteps.map((step, index) => (
         <div key={index}>

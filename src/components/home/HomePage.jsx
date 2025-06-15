@@ -11,7 +11,7 @@ const HomePage = () => {
           style={{ backgroundSize: "cover" }}
           className="w-full h-64 relative"
         />
-        <h1 className="absolute top-85  font-serif text-5xl text-center bg-white w-full opacity-60">
+        <h1 className="absolute top-85  font-serif text-3xl md:text-5xl lg:text-5xl  text-center bg-white w-full opacity-60">
           Delicious Recipes
         </h1>
       </section>

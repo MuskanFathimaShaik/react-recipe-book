@@ -25,31 +25,36 @@ const RecipeDetailsCard = ({ recipeDetails }) => {
       });
     }
   });
+
   const steps = strInstructions
     .split("\r\n\r\n")
     .filter((step) => step.trim() !== "");
   const replacedSteps = steps.map((ste, idx) => ste.replaceAll(idx + 1, " "));
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center card-ui">
+    <div className="w-full flex flex-col items-center justify-center px-4 py-6">
       <link
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"></link>
-      <section className="h-screen w-full flex flex-col  px-4 gap-6 mt-6 rounded">
+        rel="stylesheet"
+      ></link>
+
+      <section className="w-full max-w-screen-lg flex flex-col gap-6">
         <RecipeHeader
           strMeal={strMeal}
           strCategory={strCategory}
           strArea={strArea}
         />
-        <section className="mx-auto">
+
+        <section className="w-full">
           <RecipeYtVideo strYoutube={strYoutube} />
         </section>
 
-        <div className="flex justify-center px-2 items-center gap-2 w-full ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
           <RecipeThumbnail strMealThumb={strMealThumb} strSource={strSource} />
           <RecipeIngredients ingredients={ingredients} />
           <RecipeInstructions replacedSteps={replacedSteps} />
         </div>
+
         <div className="invisible">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           tenetur, velit natus exercitationem, esse officia dolorem sed ipsam

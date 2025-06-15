@@ -8,8 +8,14 @@ const RecipeThumbnail = ({ strMealThumb, strSource }) => {
         backgroundImage: `url(${strMealThumb})`,
         backgroundSize: "cover",
       }}
-      className="rounded-lg h-[32rem]  overflow-hidden  left-aside-bar-ui">
-      <a target="_blank" rel="noreferrer" href={strSource} className="relative m-4 inline-block">
+      className="rounded-lg h-[28rem] sm:h-[28rem] md:h-[30rem] lg:h-[32rem] overflow-hidden left-aside-bar-ui"
+    >
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={strSource}
+        className="relative m-4 inline-block"
+      >
         <Button className="font-medium bg-white">
           Visit Site
           <i className="bx bxs-right-top-arrow-circle absolute right-0 top-0"></i>

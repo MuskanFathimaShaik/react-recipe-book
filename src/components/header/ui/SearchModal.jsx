@@ -50,26 +50,34 @@ const SearchComponent = () => {
     <>
       <Button
         onClick={showModal}
-        className="p-0 border-none flex gap-1 items-center justify-center text-base font-medium">
+        className="p-0 border-none flex gap-1 items-center justify-center text-base font-medium"
+      >
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
         <i className="bx bx-search-alt"></i>
-        <span> Recipes</span>
+        <span className="hidden sm:inline"> Recipes</span>
       </Button>
       <Modal
         title="Browse Recipes"
         open={isModalOpen}
         onCancel={handleCancel}
-        footer={null}>
+        footer={null}
+        width={window.innerWidth < 768 ? "90%" : "60%"}
+        className="search-modal"
+        bodyStyle={{
+          padding: window.innerWidth < 768 ? "16px" : "24px",
+        }}
+      >
         <Search
           onChange={handleOnChange}
           value={searchQuery}
           placeholder="Search by recipe name...."
           type="text"
           loading={loading}
-          size="large"
+          size={window.innerWidth < 768 ? "middle" : "large"}
+          className="w-full"
         />
         <section className="mt-4 flex flex-col">
           {recipes?.meals === null ? (
@@ -81,10 +89,10 @@ const SearchComponent = () => {
               {recipes?.meals?.map((recipe, idx) => (
                 <a
                   href={`/recipe/${recipe?.strMeal}`}
-                  onClick={handleRecipeClick}>
-                  <h1
-                    className="text-lg border-b p-3 cursor-pointer hover:bg-gray-100 hover:border-blue-500"
-                    key={idx}>
+                  onClick={handleRecipeClick}
+                  key={idx}
+                >
+                  <h1 className="text-sm md:text-lg lg:text-lg border-b p-3 cursor-pointer hover:bg-gray-100 hover:border-blue-500">
                     {recipe?.strMeal}
                   </h1>
                 </a>
@@ -96,4 +104,5 @@ const SearchComponent = () => {
     </>
   );
 };
+
 export default SearchComponent;
