@@ -81,7 +81,7 @@ const SearchComponent = () => {
         />
         <section className="mt-4 flex flex-col">
           {recipes?.meals === null ? (
-            <div className="mx-auto text-lg text-blue-500">
+            <div className="mx-auto text-sm text-center md:text-lg lg:text-lg text-blue-500">
               <h1>Oops! Recipe Not Found, Search Again</h1>
             </div>
           ) : (
