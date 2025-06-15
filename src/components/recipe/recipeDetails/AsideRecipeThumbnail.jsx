@@ -8,7 +8,7 @@ const RecipeThumbnail = ({ strMealThumb, strSource }) => {
         backgroundImage: `url(${strMealThumb})`,
         backgroundSize: "cover",
       }}
-      className="rounded-lg h-[28rem] sm:h-[28rem] md:h-[30rem] lg:h-[32rem] overflow-hidden left-aside-bar-ui"
+      className="rounded-lg h-[25rem] sm:h-[28rem] md:h-[30rem] lg:h-[32rem] overflow-hidden left-aside-bar-ui"
     >
       <a
         target="_blank"

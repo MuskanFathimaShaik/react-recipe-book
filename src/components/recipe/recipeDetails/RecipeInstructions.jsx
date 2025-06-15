@@ -12,9 +12,9 @@ const RecipeInstructions = ({ replacedSteps }) => {
 dark:[&::-webkit-scrollbar-track]:bg-slate-100
 dark:[&::-webkit-scrollbar-thumb]:bg-slate-300"
     >
-      <h2 className="text-2xl">Instructions: </h2>
+      <h2 className="text-2xl rounded-lg">Instructions: </h2>
       {replacedSteps.map((step, index) => (
-        <div key={index}>
+        <div key={index} className="rounded-lg">
           <p className="text-xl mb-2">Step {index + 1}:</p>
           <p className="text-lg">{step.trim()}</p>
         </div>

@@ -8,9 +8,12 @@ const RecipeHeader = ({ strMeal, strCategory, strArea }) => {
       </h1>
       <div className="flex gap-4">
         <h2 className="text-xs md:text-xl lg:text-2xl">
-          Category: {strCategory}
+          <span className="hidden md:inline-block">Category:</span>{" "}
+          {strCategory}
         </h2>
-        <h2 className="text-xs md:text-xl lg:text-2xl">Cuisine: {strArea}</h2>
+        <h2 className="text-xs md:text-xl lg:text-2xl">
+          <span className="hidden md:inline-block">Cuisine:</span> {strArea}
+        </h2>
       </div>
     </header>
   );
