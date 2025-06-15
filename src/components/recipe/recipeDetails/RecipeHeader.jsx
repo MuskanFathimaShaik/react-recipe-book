@@ -2,7 +2,7 @@ import React from "react";
 
 const RecipeHeader = ({ strMeal, strCategory, strArea }) => {
   return (
-    <header className="flex items-center justify-between w-full bg-red-100">
+    <header className="flex items-center justify-between w-full">
       <h1 className="text-xs  md:text-2xl lg:text-3xl font-medium">
         {strMeal}
       </h1>
